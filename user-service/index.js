@@ -22,8 +22,8 @@ const UserSchema = new mongoose.Schema({
   email: String
 });
 const User = mongoose.model('User', UserSchema);
-app.get('/users', async(req, res)=>{
-  const users= await User.find();
+app.get('/users', async (req, res) => {
+  const users = await User.find();
   res.json(users);
 
 })
@@ -54,5 +54,5 @@ app.get('/', (req, res) => {
 // before starting the route here we define the server here
 app.listen(port, () => {
   // this is what gets printed on the console 
-  console.log(`Example app listening on port ${port}`)
+  console.log(`User Service listening on port ${port}`)
 })
